@@ -8,7 +8,7 @@ public class ListingActivity : Activity
         "What are personal strengths of yours?",
         "Who are people that you have helped this week?",
         "Who are some of your personal heroes?",
-        "What is something you accomplished recently that you’re proud of?",
+        "What is something you accomplished recently that you're proud of?",
         "What is a challenge you have overcome?",
         "What is something that made you smile today?",
         "What is a lesson you have learned from a difficult experience?",
@@ -28,13 +28,14 @@ public class ListingActivity : Activity
     {
         DisplayStartingMessage();
         GetRandomPrompt();
-        ShowSpinner(5);
+        ShowCountdown(10);
         GetListFromUser();
         DisplayEndingMessage();
     }
 
     public void GetRandomPrompt()
     {
+        Console.WriteLine("Think about the following question.");
         Random rand = new Random();
         Console.WriteLine(_prompts[rand.Next(_prompts.Count)]);
 
